@@ -1,6 +1,12 @@
 import './App.css';
 
-function App() {
+const checkIn = () => {
+  let pass = prompt("パスワードを入力してください:","");
+  if(pass != null) window.location.href = "https://yu-sei-m.github.io/" + pass;
+}
+
+// function App() {
+const App = () => {
   const logo = '/images/logo.png';
   return (
     <div className="App">
@@ -13,9 +19,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://yu-sei-m.github.io/react-hands-on"
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={()=>checkIn()}
         >
           はじめて学ぶReact
         </a>
