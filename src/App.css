@@ -26,6 +26,14 @@
   color: dimgrey;
 }
 
+.App-footer {
+  background-color: #efefef;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px 0px;
+}
+
 .App-link {
   /* color: #61dafb; */
   color: #294b8f;
