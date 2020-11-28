@@ -1,5 +1,6 @@
 import './App.css';
 import Link from './components/link.js'
+import Footer from './components/footer.js'
 
 const checkIn = () => {
   let pass = prompt("パスワードを入力してください:","");
@@ -20,6 +21,7 @@ const App = () => {
         </p>
         <Link text="はじめて学ぶReact" onClick={()=>checkIn()}/>
       </header>
+      <Footer/>
     </div>
   );
 }
