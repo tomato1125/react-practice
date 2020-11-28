@@ -1,6 +1,7 @@
 import './App.css';
 
 function App() {
+  const logo = '/images/logo.png';
   return (
     <div className="App">
       <header className="App-header">
