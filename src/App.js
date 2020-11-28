@@ -1,4 +1,5 @@
 import './App.css';
+import Link from './components/link.js'
 
 const checkIn = () => {
   let pass = prompt("パスワードを入力してください:","");
@@ -17,12 +18,7 @@ const App = () => {
         <p>
           <b>フィットネス・エンジニアの勉強会</b>
         </p>
-        <a
-          className="App-link"
-          onClick={()=>checkIn()}
-        >
-          はじめて学ぶReact
-        </a>
+        <Link text="はじめて学ぶReact" onClick={()=>checkIn()}/>
       </header>
     </div>
   );
