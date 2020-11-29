@@ -1,29 +1,20 @@
-import './App.css';
-import Link from './components/link.js'
-import Footer from './components/footer.js'
+import React from "react";
+import { Route, Switch, withRouter } from "react-router-dom";
+import routes from "./routes";
 
-const checkIn = () => {
-  let pass = prompt("パスワードを入力してください:","");
-  if(pass != null) window.location.href = "https://yu-sei-m.github.io/" + pass;
-}
-
-// function App() {
 const App = () => {
-  const logo = '/images/logo.png';
-  return (
-    <div className="App">
-      <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-        <br/>
-        <br/>
-        <p>
-          <b>フィットネス・エンジニアの勉強会</b>
-        </p>
-        <Link text="はじめて学ぶReact" onClick={()=>checkIn()}/>
-      </header>
-      <Footer/>
-    </div>
-  );
-}
+	return (
+    <Switch>
+      {routes.map((route, idx) => (
+        <Route
+          path={route.path}
+          exact={route.exact}
+          component={route.component}
+          key={idx}
+        />
+      ))}
+    </Switch>
+	);
+};
 
-export default App;
+export default withRouter(App);
